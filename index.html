@@ -117,26 +117,12 @@
                         <i class="fas fa-bars"></i>
                     </button>
                     <div class="search-bar">
-                        <input type="text" placeholder="Search...">
-                        <i class="fas fa-search"></i>
+                        <img src="./assets/images/search.svg" alt="">
+                        <input type="text" placeholder="Type To Search...">
                     </div>
                 </div>
                 
                 <div class="header-right">
-                    <div class="date-filter">
-                        <select>
-                            <option>Monthly</option>
-                            <option>Weekly</option>
-                            <option>Daily</option>
-                        </select>
-                    </div>
-                    
-                    <div class="date-range">
-                        <input type="date" id="startDate">
-                        <span>To</span>
-                        <input type="date" id="endDate">
-                    </div>
-                    
                     <div class="notifications">
                         <button class="notification-btn">
                             <i class="fas fa-bell"></i>
@@ -145,24 +131,40 @@
                     </div>
                     
                     <div class="user-profile">
-                        <img src="https://picsum.photos/seed/user/40/40" alt="User" class="user-avatar">
                         <div class="user-info">
                             <span class="user-name">Cyndy Lilibridge</span>
                             <span class="user-role">Super Admin</span>
                         </div>
+                        <img src="./assets/images/pp.png" alt="User" class="user-avatar">
                     </div>
                 </div>
             </header>
 
             <!-- Dashboard Content -->
             <main class="dashboard-content">
+                <!-- Page Title -->
+                <div class="page-title">
+                    <div>
+                        <h1 class="title">Dashboard</h1>
+                        <div class="flex justify-between items-center mb-8">
+                            <p class="sub-title">Dashboard  /  <span>Dashboard</span></p>
+                            <select name="date-range" id="date-range">
+                                <option value="today">Today</option>
+                                <option value="week">This Week</option>
+                                <option value="month">This Month</option>
+                                <option value="year">This Year</option>
+                            </select>
+    
+                        </div>
+                    </div>
+                </div>
                 <!-- Overview Cards -->
                 <section class="overview-cards">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                        <div class="stat-card bg-white rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[27px]">
+                        <div class="stat-card bg-[#EEFFF0] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px]">
+                                <div class="flex gap-[8px] mb-[8px]">
                                     <img src="./assets/images/earning.png" alt="Total earning picture">
                                 </div>
                                 <p class="stat-value text-xl font-bold text-gray-900">$ 2,968.90</p>
@@ -170,102 +172,102 @@
                             </div>
                         </div>
                         
-                        <div class="stat-card bg-white rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
+                        <div class="stat-card bg-[#FFFEF6] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px]">
+                                <div class="flex gap-[8px] mb-[8px]">
                                     <img src="./assets/images/commission.png" alt="Commission given picture">
                                 </div>
-                                <h3 class="text-sm text-gray-600 font-medium">Commission Given</h3>
                                 <p class="stat-value text-xl font-bold text-gray-900">$ 390.66</p>
+                                <h3 class="text-sm text-gray-600 font-medium">Commission Given</h3>
                             </div>
                         </div>
                         
-                        <div class="stat-card bg-white rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
+                        <div class="stat-card bg-[#FFF6EA] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px]">
+                                <div class="flex gap-[8px] mb-[8px]">
                                     <img src="./assets/images/item.png" alt="Items picture">
                                 </div>
-                                <h3 class="text-sm text-gray-600 font-medium">Total Item</h3>
                                 <p class="stat-value text-xl font-bold text-gray-900">2600</p>
+                                <h3 class="text-sm text-gray-600 font-medium">Total Item</h3>
                             </div>
                         </div>
                         
-                        <div class="stat-card bg-white rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
+                        <div class="stat-card bg-[#EDFFF3] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px]">
+                                <div class="flex gap-[8px] mb-[8px]">
                                     <img src="./assets/images/Instock.png" alt="in stock picture">
                                 </div>
-                                <h3 class="text-sm text-gray-600 font-medium">In Stock</h3>
                                 <p class="stat-value text-xl font-bold text-gray-900">18.6K</p>
+                                <h3 class="text-sm text-gray-600 font-medium">In Stock</h3>
                             </div>
                         </div>
                         
-                        <div class="stat-card bg-white rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
+                        <div class="stat-card bg-[#F8EBEC] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px]">
+                                <div class="flex gap-[8px] mb-[8px]">
                                     <img src="./assets/images/stockout.png" alt="Out of stock picture">
                                 </div>
-                                <h3 class="text-sm text-gray-600 font-medium">Out Of Stock</h3>
                                 <p class="stat-value text-xl font-bold text-gray-900">190</p>
+                                <h3 class="text-sm text-gray-600 font-medium">Out Of Stock</h3>
                             </div>
                         </div>
                         
-                        <div class="stat-card bg-white rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
+                        <div class="stat-card bg-[#FFF4E6] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px]">
+                                <div class="flex gap-[8px] mb-[8px]">
                                     <img src="./assets/images/commission.png" alt="commission picture">
                                 </div>
-                                <h3 class="text-sm text-gray-600 font-medium">Waiting For Confirmation</h3>
                                 <p class="stat-value text-xl font-bold text-gray-900">15</p>
+                                <h3 class="text-sm text-gray-600 font-medium">Waiting For Confirmation</h3>
                             </div>
                         </div>
                         
-                        <div class="stat-card bg-white rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
+                        <div class="stat-card bg-[#EBF7FF] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px]">
+                                <div class="flex gap-[8px] mb-[8px]">
                                     <img src="./assets/images/processing.png" alt="processing picture">
                                 </div>
-                                <h3 class="text-sm text-gray-600 font-medium">Processing Order</h3>
                                 <p class="stat-value text-xl font-bold text-gray-900">70</p>
+                                <h3 class="text-sm text-gray-600 font-medium">Processing Order</h3>
                             </div>
                         </div>
                         
-                        <div class="stat-card bg-white rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
+                        <div class="stat-card bg-[#FAFEEB] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px]">
+                                <div class="flex gap-[8px] mb-[8px]">
                                     <img src="./assets/images/delivery.png" alt="delivery picture">
                                 </div>
-                                <h3 class="text-sm text-gray-600 font-medium">Ready For Delivery</h3>
                                 <p class="stat-value text-xl font-bold text-gray-900">42</p>
+                                <h3 class="text-sm text-gray-600 font-medium">Ready For Delivery</h3>
                             </div>
                         </div>
                         
-                        <div class="stat-card bg-white rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
+                        <div class="stat-card bg-[#E4FBFF] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px]">
+                                <div class="flex gap-[8px] mb-[8px]">
                                     <img src="./assets/images/delivered.png" alt="order picture">
                                 </div>
-                                <h3 class="text-sm text-gray-600 font-medium">Delivered Order</h3>
                                 <p class="stat-value text-xl font-bold text-gray-900">15k</p>
+                                <h3 class="text-sm text-gray-600 font-medium">Delivered Order</h3>
                             </div>
                         </div>
                         
-                        <div class="stat-card bg-white rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
+                        <div class="stat-card bg-[#FFF7F1] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px]">
+                                <div class="flex gap-[8px] mb-[8px]">
                                     <img src="./assets/images/refunded.png" alt="Refunded picture">
                                 </div>
-                                <h3 class="text-sm text-gray-600 font-medium">Refunded</h3>
                                 <p class="stat-value text-xl font-bold text-gray-900">$ 580.00</p>
+                                <h3 class="text-sm text-gray-600 font-medium">Refunded</h3>
                             </div>
                         </div>
                     </div>
@@ -354,6 +356,9 @@
                     </div>
                 </section>
             </main>
+            <footer class="flex justify-between px-[26px] py-4">
+                <p>© Naas-E-mart. 2025.</p>
+            </footer>
         </div>
     </div>
 

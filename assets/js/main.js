@@ -86,48 +86,117 @@ function setupChart() {
         new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'],
                 datasets: [{
-                    label: 'Earnings',
-                    data: [12000, 19000, 15000, 25000, 22000, 30000, 28000, 35000, 32000, 38000, 40000, 45000],
-                    backgroundColor: 'rgba(102, 126, 234, 0.8)',
-                    borderColor: 'rgba(102, 126, 234, 1)',
-                    borderWidth: 1
+                    label: 'Total earning',
+                    data: [95.8, 87.2, 92.5, 103.1, 98.7, 112.3, 88.9, 96.4, 105.2, 91.8, 99.5, 108.7, 94.3, 101.6, 89.2, 97.8, 106.5, 93.1, 100.4, 87.6, 95.3, 104.9, 90.7, 98.2, 107.8, 85.4, 93.7, 102.3, 96.9, 110.5, 89.6],
+                    backgroundColor: '#3B82F6',
+                    borderColor: '#3B82F6',
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    barPercentage: 0.8
                 }, {
-                    label: 'Commission',
-                    data: [1200, 1900, 1500, 2500, 2200, 3000, 2800, 3500, 3200, 3800, 4000, 4500],
-                    backgroundColor: 'rgba(118, 75, 162, 0.8)',
-                    borderColor: 'rgba(118, 75, 162, 1)',
-                    borderWidth: 1
+                    label: 'Commission given',
+                    data: [12.6, 11.5, 12.2, 13.6, 13.0, 14.8, 11.7, 12.7, 13.9, 12.1, 13.1, 14.3, 12.4, 13.4, 11.8, 12.9, 14.0, 12.3, 13.2, 11.5, 12.5, 13.8, 11.9, 12.9, 14.2, 11.2, 12.3, 13.5, 12.7, 14.5, 11.8],
+                    backgroundColor: '#1E40AF',
+                    borderColor: '#1E40AF',
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    barPercentage: 0.8
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            callback: function(value) {
-                                return '$' + value.toLocaleString();
-                            }
-                        }
-                    }
+                interaction: {
+                    intersect: false,
+                    mode: 'index'
                 },
                 plugins: {
                     legend: {
                         display: true,
-                        position: 'top'
+                        position: 'top',
+                        align: 'end',
+                        labels: {
+                            usePointStyle: true,
+                            padding: 20,
+                            font: {
+                                family: 'Poppins',
+                                size: 12
+                            },
+                            generateLabels: function(chart) {
+                                return [
+                                    {
+                                        text: 'Total earning: $2,968.90',
+                                        fillStyle: '#3B82F6',
+                                        strokeStyle: '#3B82F6',
+                                        pointStyle: 'rect',
+                                        lineWidth: 0
+                                    },
+                                    {
+                                        text: 'Commission given: $390.66',
+                                        fillStyle: '#1E40AF',
+                                        strokeStyle: '#1E40AF',
+                                        pointStyle: 'rect',
+                                        lineWidth: 0
+                                    }
+                                ];
+                            }
+                        }
                     },
                     tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        titleFont: {
+                            family: 'Poppins',
+                            size: 12
+                        },
+                        bodyFont: {
+                            family: 'Poppins',
+                            size: 11
+                        },
+                        padding: 12,
+                        cornerRadius: 8,
                         callbacks: {
                             label: function(context) {
                                 let label = context.dataset.label || '';
                                 if (label) {
                                     label += ': ';
                                 }
-                                label += '$' + context.parsed.y.toLocaleString();
+                                label += '$' + context.parsed.y.toFixed(2);
                                 return label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            font: {
+                                family: 'Poppins',
+                                size: 11
+                            },
+                            color: '#6B7280'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        max: 400,
+                        grid: {
+                            color: '#E5E7EB',
+                            drawBorder: false
+                        },
+                        ticks: {
+                            stepSize: 100,
+                            font: {
+                                family: 'Poppins',
+                                size: 11
+                            },
+                            color: '#6B7280',
+                            callback: function(value) {
+                                return value + 'K';
                             }
                         }
                     }
