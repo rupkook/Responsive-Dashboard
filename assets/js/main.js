@@ -1,8 +1,6 @@
-// Main JavaScript file for Admin Dashboard
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Admin Dashboard loaded successfully');
-    
-    // Initialize dashboard components
     initializeDashboard();
 });
 
@@ -23,6 +21,16 @@ function setupSidebar() {
     if (sidebarToggle) {
         sidebarToggle.addEventListener('click', function() {
             sidebar.classList.toggle('collapsed');
+            
+            // Change icon based on sidebar state
+            const icon = sidebarToggle.querySelector('i');
+            if (sidebar.classList.contains('collapsed')) {
+                icon.classList.remove('fa-chevron-left');
+                icon.classList.add('fa-chevron-right');
+            } else {
+                icon.classList.remove('fa-chevron-right');
+                icon.classList.add('fa-chevron-left');
+            }
         });
     }
 }
@@ -38,9 +46,9 @@ function setupMobileMenu() {
         });
     }
     
-    // Close sidebar when clicking outside on mobile
+    // Close sidebar when clicking outside on mobile and tablet
     document.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 1024) { // Tablet and mobile only
             if (!sidebar.contains(e.target) && !mobileSidebarToggle.contains(e.target)) {
                 sidebar.classList.remove('active');
             }
@@ -172,7 +180,8 @@ function setupNotifications() {
 window.addEventListener('resize', function() {
     const sidebar = document.getElementById('sidebar');
     
-    if (window.innerWidth > 768) {
+    // Hide mobile menu when switching to desktop
+    if (window.innerWidth > 1024) {
         sidebar.classList.remove('active');
     }
 });
