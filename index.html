@@ -15,7 +15,7 @@
         <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <img src="./assets/images/logo.png" alt="icon">
+                <img class="logo" src="./assets/images/logo.png" alt="icon">
                 <button class="sidebar-toggle" id="sidebarToggle">
                     <img src="./assets/images/arrow-double.svg" alt="icon">
                 </button>
@@ -111,7 +111,7 @@
         <!-- Main Content -->
         <div class="main-content">
             <!-- Header -->
-            <header class="header">
+            <header class="header section-spaching-bottom">
                 <div class="header-left">
                     <button class="mobile-sidebar-toggle" id="mobileSidebarToggle">
                         <i class="fas fa-bars"></i>
@@ -143,7 +143,7 @@
             <!-- Dashboard Content -->
             <main class="dashboard-content">
                 <!-- Page Title -->
-                <div class="page-title">
+                <div class="page-title page-title-spaching-bottom">
                     <div>
                         <h1 class="title">Dashboard</h1>
                         <div class="flex justify-between items-center mb-8">
@@ -159,7 +159,7 @@
                     </div>
                 </div>
                 <!-- Overview Cards -->
-                <section class="overview-cards">
+                <section class="overview-cards section-spaching-bottom">
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[27px]">
                         <div class="stat-card bg-[#EEFFF0] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
@@ -274,7 +274,7 @@
                 </section>
 
                 <!-- Charts Section -->
-                <section class="charts-section mb-6">
+                <section class="charts-section section-spaching-bottom">
                     <div class="chart-container bg-white rounded-lg shadow-md p-6">
                         <h3 class="text-lg font-semibold text-gray-900 mb-4">Earning and Commission</h3>
                         <div class="chart-placeholder h-64 bg-gray-50 rounded-lg flex items-center justify-center">
@@ -284,7 +284,7 @@
                 </section>
 
                 <!-- Tables Section -->
-                <section class="tables-section">
+                <section class="tables-section section-spaching-bottom">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <div class="table-container bg-white rounded-lg shadow-md">
                             <div class="p-4 border-b border-gray-200">
@@ -356,8 +356,15 @@
                     </div>
                 </section>
             </main>
-            <footer class="flex justify-between px-[26px] py-4">
+            <footer class="flex justify-between px-[26px] py-4 bg-white">
                 <p>© Naas-E-mart. 2025.</p>
+                <ul class="flex gap-4 items-center">
+                    <li><a href="#">Profile</a></li>
+                    <li><img src="./assets/images/dot.svg" alt="dot"></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><img src="./assets/images/dot.svg" alt="dot"></li>
+                    <li><a href="#">Software version : 3.5</a></li>
+                </ul>
             </footer>
         </div>
     </div>

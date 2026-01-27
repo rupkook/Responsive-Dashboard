@@ -11,6 +11,7 @@ function initializeDashboard() {
     setupChart();
     setupSearch();
     setupNotifications();
+    setupHeaderAnimation();
 }
 
 // Sidebar functionality
@@ -90,16 +91,16 @@ function setupChart() {
                 datasets: [{
                     label: 'Total earning',
                     data: [95.8, 87.2, 92.5, 103.1, 98.7, 112.3, 88.9, 96.4, 105.2, 91.8, 99.5, 108.7, 94.3, 101.6, 89.2, 97.8, 106.5, 93.1, 100.4, 87.6, 95.3, 104.9, 90.7, 98.2, 107.8, 85.4, 93.7, 102.3, 96.9, 110.5, 89.6],
-                    backgroundColor: '#3B82F6',
-                    borderColor: '#3B82F6',
+                    backgroundColor: '#215DB5',
+                    borderColor: '#215DB5',
                     borderWidth: 1,
                     borderRadius: 4,
                     barPercentage: 0.8
                 }, {
                     label: 'Commission given',
                     data: [12.6, 11.5, 12.2, 13.6, 13.0, 14.8, 11.7, 12.7, 13.9, 12.1, 13.1, 14.3, 12.4, 13.4, 11.8, 12.9, 14.0, 12.3, 13.2, 11.5, 12.5, 13.8, 11.9, 12.9, 14.2, 11.2, 12.3, 13.5, 12.7, 14.5, 11.8],
-                    backgroundColor: '#1E40AF',
-                    borderColor: '#1E40AF',
+                    backgroundColor: '#599CFF',
+                    borderColor: '#599CFF',
                     borderWidth: 1,
                     borderRadius: 4,
                     barPercentage: 0.8
@@ -128,16 +129,16 @@ function setupChart() {
                                 return [
                                     {
                                         text: 'Total earning: $2,968.90',
-                                        fillStyle: '#3B82F6',
-                                        strokeStyle: '#3B82F6',
-                                        pointStyle: 'rect',
+                                        fillStyle: '#215DB5',
+                                        strokeStyle: '#215DB5',
+                                        pointStyle: 'circle',
                                         lineWidth: 0
                                     },
                                     {
                                         text: 'Commission given: $390.66',
-                                        fillStyle: '#1E40AF',
-                                        strokeStyle: '#1E40AF',
-                                        pointStyle: 'rect',
+                                        fillStyle: '#599CFF',
+                                        strokeStyle: '#599CFF',
+                                        pointStyle: 'circle',
                                         lineWidth: 0
                                     }
                                 ];
@@ -314,6 +315,16 @@ function sortTable(table, columnIndex) {
 
 // Initialize table sorting when DOM is ready
 document.addEventListener('DOMContentLoaded', setupTableSorting);
+
+// Header animation on page load
+function setupHeaderAnimation() {
+    const header = document.querySelector('.header');
+    
+    // Show header with smooth transition from top
+    setTimeout(() => {
+        header.style.transform = 'translateY(0)';
+    }, 300);
+}
 
 // Export functions for global access
 window.dashboardUtils = {
