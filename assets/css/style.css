@@ -308,7 +308,7 @@ body {
 .user-profile {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
 }
 
 .user-avatar {
@@ -380,17 +380,13 @@ body {
 .card-content {
     width: 100%;
 }
-.card-content h3 {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 5px;
-    
-}
+
 
 .stat-value {
     font-size: 28px;
     font-weight: 400;
     color: #1C2434;
+    margin-bottom: 2px;
 }
 
 /* Charts Section */
@@ -452,7 +448,7 @@ body {
 
 .data-table th,
 .data-table td {
-    padding: 12px;
+    padding: 17px;
     text-align: left;
     border-bottom: 1px solid #eee;
 }
