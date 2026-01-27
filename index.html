@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendor Dashboard - Admin Panel</title>
+    <title>Naas eMart</title>
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
 </head>
 <body>
     <div class="dashboard-container">
@@ -23,85 +24,209 @@
             
             <nav class="sidebar-nav">
                 <ul class="nav-list">
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-dashboard"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-cash-register"></i>
-                            <span>Point of Sale</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span>Order Management</span>
-                        </a>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-box"></i>
-                            <span>Item Management</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </a>
-                        <ul class="submenu">
-                            <li><a href="#">Items</a></li>
-                            <li><a href="#">Addons</a></li>
-                            <li><a href="#">Categories</a></li>
-                            <li><a href="#">Tag</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-bullhorn"></i>
-                            <span>Marketing</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </a>
-                        <ul class="submenu">
-                            <li><a href="#">Campaigns</a></li>
-                            <li><a href="#">Coupons</a></li>
-                            <li><a href="#">Banners</a></li>
+                        <span>Dashboard</span>
+                        <ul class="pt-[10px] pl-6 submenu-main-wrap">
+                            <li onclick="toggleSubmenu(this)">
+                                <div class="flex items-center justify-between">
+                                    <a href="#" class="nav-link">
+                                        <img class="mr-[10px]" src="./assets/images/dashboard.svg" alt="">
+                                        <span>Dashboard</span>
+                                    </a>
+                                    <button class="nav-toggle">
+                                        <img src="./assets/images/arrow-down2.svg" alt="">
+                                    </button>
+                                </div>
+                                <ul class="submenu">
+                                    <li>demo1</li>
+                                    <li>demo2</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-ad"></i>
-                            <span>Advertisement</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-wallet"></i>
-                            <span>Wallet</span>
-                        </a>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-users"></i>
-                            <span>Employee</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </a>
-                        <ul class="submenu">
-                            <li><a href="#">Employee Role</a></li>
-                            <li><a href="#">Employees</a></li>
+                        <span>Point of Sale</span>
+                        <ul class="pt-[10px] pl-6 submenu-main-wrap" >
+                            <li onclick="toggleSubmenu(this)">
+                                <div class="flex items-center justify-between">
+                                    <a href="#" class="nav-link">
+                                        <img class="mr-[10px]" src="./assets/images/shopping.svg" alt="">
+                                        <span>POS</span>
+                                    </a>
+                                    <button class="nav-toggle">
+                                        <img src="./assets/images/arrow-down2.svg" alt="">
+                                    </button>
+                                </div>
+                                <ul class="submenu">
+                                    <li>demo1</li>
+                                    <li>demo2</li>
+                                </ul>
+                            </li>
+                            
                         </ul>
                     </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Reports</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </a>
-                        <ul class="submenu">
-                            <li><a href="#">Expense Report</a></li>
-                            <li><a href="#">Disbursement Report</a></li>
-                            <li><a href="#">VAT Report</a></li>
-                            <li><a href="#">Sales Report</a></li>
-                            <li><a href="#">Payment History</a></li>
-                            <li><a href="#">Payout Requests</a></li>
+                    <li class="nav-item">
+                        <span>Order Management</span>
+                        <ul class="pt-[10px] pl-6 submenu-main-wrap">
+                            <li onclick="toggleSubmenu(this)">
+                                <div class="flex items-center justify-between">
+
+                                    <a href="#" class="nav-link">
+                                        <img class="mr-[10px]" src="./assets/images/shopping.svg" alt="">
+                                        <span>Orders</span>
+                                    </a>
+                                    <button class="nav-toggle">
+                                        <img src="./assets/images/arrow-down2.svg" alt="">
+                                    </button>
+                                </div>
+                                <ul class="submenu">
+                                        <li>demo1</li>
+                                        <li>demo2</li>
+                                    </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <span>Item management</span>
+                        <ul class="pt-[10px] pl-6 submenu-main-wrap">
+                            <li onclick="toggleSubmenu(this)">
+                                <div class="flex items-center justify-between">
+
+                                    <a href="#" class="nav-link">
+                                        <img class="mr-[10px]" src="./assets/images/items.svg" alt="">
+                                        <span>Items</span>
+                                    </a>
+                                    <button class="nav-toggle">
+                                        <img src="./assets/images/arrow-down2.svg" alt="">
+                                    </button>
+                                </div>
+                                <ul class="submenu">
+                                    <li>demo1</li>
+                                    <li>demo2</li>
+                                </ul>
+                            </li>
+                            <li onclick="toggleSubmenu(this)">
+                                <div class="flex items-center justify-between">
+
+                                    <a href="#" class="nav-link">
+                                        <img class="mr-[10px]" src="./assets/images/addons.svg" alt="">
+                                        <span>Addons</span>
+                                    </a>
+                                    <button class="nav-toggle">
+                                        <img src="./assets/images/arrow-down2.svg" alt="">
+                                    </button>
+                                </div>
+                                <ul class="submenu">
+                                    <li>demo1</li>
+                                    <li>demo2</li>
+                                </ul>
+                            </li>
+                            <li onclick="toggleSubmenu(this)">
+                                <div class="flex items-center justify-between">
+
+                                    <a href="#" class="nav-link">
+                                        <img class="mr-[10px]" src="./assets/images/category.svg" alt="">
+                                        <span>Categories</span>
+                                    </a>
+                                    <button class="nav-toggle">
+                                        <img src="./assets/images/arrow-down2.svg" alt="">
+                                    </button>
+                                </div>
+                                <ul class="submenu">
+                                    <li>demo1</li>
+                                    <li>demo2</li>
+                                </ul>
+                            </li>
+                            <li onclick="toggleSubmenu(this)">
+                                <div class="flex items-center justify-between">
+
+                                    <a href="#" class="nav-link">
+                                        <img class="mr-[10px]" src="./assets/images/tags.svg" alt="">
+                                        <span>Tag</span>
+                                    </a>
+                                    <button class="nav-toggle">
+                                        <img src="./assets/images/arrow-down2.svg" alt="">
+                                    </button>
+                                </div>
+                                <ul class="submenu">
+                                    <li>demo1</li>
+                                    <li>demo2</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <span>Marketing section</span>
+                        <ul class="pt-[10px] pl-6 submenu-main-wrap">
+                            <li onclick="toggleSubmenu(this)">
+                                <div class="flex items-center justify-between">
+
+                                    <a href="#" class="nav-link">
+                                        <img class="mr-[10px]" src="./assets/images/ticket.svg" alt="">
+                                        <span>Campaigns</span>
+                                    </a>
+                                    <button class="nav-toggle">
+                                        <img src="./assets/images/arrow-down2.svg" alt="">
+                                    </button>
+                                </div>
+                                <ul class="submenu">
+                                        <li>demo1</li>
+                                        <li>demo2</li>
+                                    </ul>
+                            </li>
+                            <li onclick="toggleSubmenu(this)">
+                                <div class="flex items-center justify-between">
+
+                                    <a href="#" class="nav-link">
+                                        <img class="mr-[10px]" src="./assets/images/coupons.svg" alt="">
+                                        <span>Coupons</span>
+                                    </a>
+                                    <button class="nav-toggle">
+                                        <img src="./assets/images/arrow-down2.svg" alt="">
+                                    </button>
+                                </div>
+                                <ul class="submenu">
+                                        <li>demo1</li>
+                                        <li>demo2</li>
+                                    </ul>
+                            </li>
+                            <li onclick="toggleSubmenu(this)">
+                                <div class="flex items-center justify-between">
+
+                                    <a href="#" class="nav-link">
+                                        <img class="mr-[10px]" src="./assets/images/banner.svg" alt="">
+                                        <span>Banners</span>
+                                    </a>
+                                    <button class="nav-toggle">
+                                        <img src="./assets/images/arrow-down2.svg" alt="">
+                                    </button>
+                                </div>
+                                <ul class="submenu">
+                                        <li>demo1</li>
+                                        <li>demo2</li>
+                                    </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <span>Advertisement Management</span>
+                        <ul class="pt-[10px] pl-6 submenu-main-wrap">
+                            <li onclick="toggleSubmenu(this)">
+                                <div class="flex items-center justify-between">
+
+                                    <a href="#" class="nav-link">
+                                        <img class="mr-[10px]" src="./assets/images/balloon.svg" alt="">
+                                        <span>Advertisement</span>
+                                    </a>
+                                    <button class="nav-toggle">
+                                        <img src="./assets/images/arrow-down2.svg" alt="">
+                                    </button>
+                                </div>
+                                <ul class="submenu">
+                                    <li>demo1</li>
+                                    <li>demo2</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -145,14 +270,17 @@
                 <!-- Page Title -->
                 <div class="page-title page-title-spaching-bottom">
                     <div>
-                        <h1 class="title">Dashboard</h1>
+                        <h1>Dashboard</h1>
                         <div class="flex justify-between items-center mb-8">
-                            <p class="sub-title">Dashboard  /  <span>Dashboard</span></p>
+                            <ul class="flex items-center gap-4">
+                                <li>Dashboard</li>
+                                <li>/</li>
+                                <li class="text-[#3C50E0]">Dashboard</li>
+                            </ul>
                             <select name="date-range" id="date-range">
-                                <option value="today">Today</option>
-                                <option value="week">This Week</option>
-                                <option value="month">This Month</option>
-                                <option value="year">This Year</option>
+                                <option value="month">Monthly</option>
+                                <option value="week">Weekly</option>
+                                <option value="year">Yearly</option>
                             </select>
     
                         </div>
@@ -164,10 +292,14 @@
                         <div class="stat-card bg-[#EEFFF0] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px] mb-[8px]">
+                                <div class="flex items-center justify-between mb-[8px]">
                                     <img src="./assets/images/earning.png" alt="Total earning picture">
+                                    <div class="flex items-center gap-[4px]">
+                                        <img src="./assets/images/arrow-up.svg" alt="">
+                                        <span class="text-[#25AC44]">18%</span>
+                                    </div>
                                 </div>
-                                <p class="stat-value text-xl font-bold text-gray-900">$ 2,968.90</p>
+                                <p class="stat-value ">$ 2,968.90</p>
                                 <h3 class="text-sm text-gray-600 font-medium">Total Earning</h3>
                             </div>
                         </div>
@@ -175,10 +307,14 @@
                         <div class="stat-card bg-[#FFFEF6] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px] mb-[8px]">
+                                <div class="flex items-center justify-between mb-[8px]">
                                     <img src="./assets/images/commission.png" alt="Commission given picture">
+                                    <div class="flex items-center gap-[4px]">
+                                        <img src="./assets/images/arrow-up.svg" alt="">
+                                        <span class="text-[#25AC44]">18%</span>
+                                    </div>
                                 </div>
-                                <p class="stat-value text-xl font-bold text-gray-900">$ 390.66</p>
+                                <p class="stat-value ">$ 390.66</p>
                                 <h3 class="text-sm text-gray-600 font-medium">Commission Given</h3>
                             </div>
                         </div>
@@ -189,7 +325,7 @@
                                 <div class="flex gap-[8px] mb-[8px]">
                                     <img src="./assets/images/item.png" alt="Items picture">
                                 </div>
-                                <p class="stat-value text-xl font-bold text-gray-900">2600</p>
+                                <p class="stat-value ">2600</p>
                                 <h3 class="text-sm text-gray-600 font-medium">Total Item</h3>
                             </div>
                         </div>
@@ -200,7 +336,7 @@
                                 <div class="flex gap-[8px] mb-[8px]">
                                     <img src="./assets/images/Instock.png" alt="in stock picture">
                                 </div>
-                                <p class="stat-value text-xl font-bold text-gray-900">18.6K</p>
+                                <p class="stat-value ">18.6K</p>
                                 <h3 class="text-sm text-gray-600 font-medium">In Stock</h3>
                             </div>
                         </div>
@@ -211,7 +347,7 @@
                                 <div class="flex gap-[8px] mb-[8px]">
                                     <img src="./assets/images/stockout.png" alt="Out of stock picture">
                                 </div>
-                                <p class="stat-value text-xl font-bold text-gray-900">190</p>
+                                <p class="stat-value ">190</p>
                                 <h3 class="text-sm text-gray-600 font-medium">Out Of Stock</h3>
                             </div>
                         </div>
@@ -219,10 +355,14 @@
                         <div class="stat-card bg-[#FFF4E6] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px] mb-[8px]">
-                                    <img src="./assets/images/commission.png" alt="commission picture">
+                                <div class="flex items-center justify-between mb-[8px]">
+                                    <img src="./assets/images/confirmation.png" alt="commission picture">
+                                    <div class="flex items-center gap-[4px]">
+                                        <img src="./assets/images/arrow-up.svg" alt="">
+                                        <span class="text-[#25AC44]">18%</span>
+                                    </div>
                                 </div>
-                                <p class="stat-value text-xl font-bold text-gray-900">15</p>
+                                <p class="stat-value ">15</p>
                                 <h3 class="text-sm text-gray-600 font-medium">Waiting For Confirmation</h3>
                             </div>
                         </div>
@@ -230,10 +370,14 @@
                         <div class="stat-card bg-[#EBF7FF] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px] mb-[8px]">
+                                <div class="flex items-center justify-between mb-[8px]">
                                     <img src="./assets/images/processing.png" alt="processing picture">
+                                    <div class="flex items-center gap-[4px]">
+                                        <img src="./assets/images/arrow-up.svg" alt="">
+                                        <span class="text-[#25AC44]">18%</span>
+                                    </div>
                                 </div>
-                                <p class="stat-value text-xl font-bold text-gray-900">70</p>
+                                <p class="stat-value ">70</p>
                                 <h3 class="text-sm text-gray-600 font-medium">Processing Order</h3>
                             </div>
                         </div>
@@ -241,10 +385,14 @@
                         <div class="stat-card bg-[#FAFEEB] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px] mb-[8px]">
+                                <div class="flex items-center justify-between mb-[8px]">
                                     <img src="./assets/images/delivery.png" alt="delivery picture">
+                                    <div class="flex items-center gap-[4px]">
+                                        <img src="./assets/images/arrow-up.svg" alt="">
+                                        <span class="text-[#25AC44]">18%</span>
+                                    </div>
                                 </div>
-                                <p class="stat-value text-xl font-bold text-gray-900">42</p>
+                                <p class="stat-value ">42</p>
                                 <h3 class="text-sm text-gray-600 font-medium">Ready For Delivery</h3>
                             </div>
                         </div>
@@ -252,10 +400,14 @@
                         <div class="stat-card bg-[#E4FBFF] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px] mb-[8px]">
+                                <div class="flex items-center justify-between mb-[8px]">
                                     <img src="./assets/images/delivered.png" alt="order picture">
+                                    <div class="flex items-center gap-[4px]">
+                                        <img src="./assets/images/arrow-up.svg" alt="">
+                                        <span class="text-[#25AC44]">18%</span>
+                                    </div>
                                 </div>
-                                <p class="stat-value text-xl font-bold text-gray-900">15k</p>
+                                <p class="stat-value ">15k</p>
                                 <h3 class="text-sm text-gray-600 font-medium">Delivered Order</h3>
                             </div>
                         </div>
@@ -263,10 +415,14 @@
                         <div class="stat-card bg-[#FFF7F1] rounded-lg shadow-md p-4 flex items-center space-x-3 hover:shadow-lg transition-shadow">
                             
                             <div class="card-content">
-                                <div class="flex gap-[8px] mb-[8px]">
+                                <div class="flex items-center justify-between mb-[8px]">
                                     <img src="./assets/images/refunded.png" alt="Refunded picture">
+                                    <div class="flex items-center gap-[4px]">
+                                        <img src="./assets/images/arrow-up.svg" alt="">
+                                        <span class="text-[#25AC44]">18%</span>
+                                    </div>
                                 </div>
-                                <p class="stat-value text-xl font-bold text-gray-900">$ 580.00</p>
+                                <p class="stat-value ">$ 580.00</p>
                                 <h3 class="text-sm text-gray-600 font-medium">Refunded</h3>
                             </div>
                         </div>

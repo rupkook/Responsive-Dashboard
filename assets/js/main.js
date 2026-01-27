@@ -326,9 +326,27 @@ function setupHeaderAnimation() {
     }, 300);
 }
 
+// Toggle submenu function
+function toggleSubmenu(wrapElement) {
+    // Find the submenu within the wrap element
+    const submenu = wrapElement.querySelector('.submenu');
+    const arrow = wrapElement.querySelector('.nav-toggle');
+    
+    if (submenu) {
+        // Toggle submenu
+        submenu.classList.toggle('active');
+        
+        // Rotate arrow
+        arrow.classList.toggle('rotated');
+    }
+}
+
 // Export functions for global access
 window.dashboardUtils = {
     formatCurrency,
     formatDate,
     performSearch
 };
+
+// Make toggleSubmenu globally available
+window.toggleSubmenu = toggleSubmenu;
