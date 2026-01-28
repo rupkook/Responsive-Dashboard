@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Font Awesome for icons -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="dashboard-container">
@@ -23,11 +23,43 @@
             </div>
             
             <nav class="sidebar-nav">
+                <ul class="nav-icons">
+                    <li class="cursor-pointer">
+                        <img src="./assets/images/dashboard.svg" alt="">
+                    </li>
+                    <li class="cursor-pointer">
+                        <img src="./assets/images/shopping.svg" alt="">
+                    </li>
+                    <li class="cursor-pointer">
+                        <img src="./assets/images/items.svg" alt="">
+                    </li>
+                    <li class="cursor-pointer">
+                        <img src="./assets/images/addons.svg" alt="">
+                    </li>
+                    <li class="cursor-pointer">
+                        <img src="./assets/images/category.svg" alt="">
+                    </li>
+                    <li class="cursor-pointer">
+                        <img src="./assets/images/tags.svg" alt="">
+                    </li>
+                    <li class="cursor-pointer">
+                        <img src="./assets/images/ticket.svg" alt="">
+                    </li>
+                    <li class="cursor-pointer">
+                        <img src="./assets/images/coupons.svg" alt="">
+                    </li>
+                    <li class="cursor-pointer">
+                        <img src="./assets/images/banner.svg" alt="">
+                    </li>
+                    <li class="cursor-pointer">
+                        <img src="./assets/images/balloon.svg" alt="">
+                    </li>
+                </ul>
                 <ul class="nav-list">
                     <li class="nav-item">
                         <span>Dashboard</span>
                         <ul class="pt-[10px] pl-6 submenu-main-wrap">
-                            <li onclick="toggleSubmenu(this)">
+                            <li class="nav-item has-submenu">
                                 <div class="flex items-center justify-between">
                                     <a href="#" class="nav-link">
                                         <img class="mr-[10px]" src="./assets/images/dashboard.svg" alt="">
@@ -47,7 +79,7 @@
                     <li class="nav-item">
                         <span>Point of Sale</span>
                         <ul class="pt-[10px] pl-6 submenu-main-wrap" >
-                            <li onclick="toggleSubmenu(this)">
+                            <li class="nav-item has-submenu">
                                 <div class="flex items-center justify-between">
                                     <a href="#" class="nav-link">
                                         <img class="mr-[10px]" src="./assets/images/shopping.svg" alt="">
@@ -68,7 +100,7 @@
                     <li class="nav-item">
                         <span>Order Management</span>
                         <ul class="pt-[10px] pl-6 submenu-main-wrap">
-                            <li onclick="toggleSubmenu(this)">
+                            <li class="nav-item has-submenu">
                                 <div class="flex items-center justify-between">
 
                                     <a href="#" class="nav-link">
@@ -89,9 +121,8 @@
                     <li class="nav-item">
                         <span>Item management</span>
                         <ul class="pt-[10px] pl-6 submenu-main-wrap">
-                            <li onclick="toggleSubmenu(this)">
+                            <li class="nav-item has-submenu">
                                 <div class="flex items-center justify-between">
-
                                     <a href="#" class="nav-link">
                                         <img class="mr-[10px]" src="./assets/images/items.svg" alt="">
                                         <span>Items</span>
@@ -105,9 +136,8 @@
                                     <li>demo2</li>
                                 </ul>
                             </li>
-                            <li onclick="toggleSubmenu(this)">
+                            <li class="nav-item has-submenu">
                                 <div class="flex items-center justify-between">
-
                                     <a href="#" class="nav-link">
                                         <img class="mr-[10px]" src="./assets/images/addons.svg" alt="">
                                         <span>Addons</span>
@@ -121,9 +151,8 @@
                                     <li>demo2</li>
                                 </ul>
                             </li>
-                            <li onclick="toggleSubmenu(this)">
+                            <li class="nav-item has-submenu">
                                 <div class="flex items-center justify-between">
-
                                     <a href="#" class="nav-link">
                                         <img class="mr-[10px]" src="./assets/images/category.svg" alt="">
                                         <span>Categories</span>
@@ -137,9 +166,8 @@
                                     <li>demo2</li>
                                 </ul>
                             </li>
-                            <li onclick="toggleSubmenu(this)">
+                            <li class="nav-item has-submenu">
                                 <div class="flex items-center justify-between">
-
                                     <a href="#" class="nav-link">
                                         <img class="mr-[10px]" src="./assets/images/tags.svg" alt="">
                                         <span>Tag</span>
@@ -158,9 +186,8 @@
                     <li class="nav-item">
                         <span>Marketing section</span>
                         <ul class="pt-[10px] pl-6 submenu-main-wrap">
-                            <li onclick="toggleSubmenu(this)">
+                            <li class="nav-item has-submenu">
                                 <div class="flex items-center justify-between">
-
                                     <a href="#" class="nav-link">
                                         <img class="mr-[10px]" src="./assets/images/ticket.svg" alt="">
                                         <span>Campaigns</span>
@@ -174,9 +201,8 @@
                                         <li>demo2</li>
                                     </ul>
                             </li>
-                            <li onclick="toggleSubmenu(this)">
+                            <li class="nav-item has-submenu">
                                 <div class="flex items-center justify-between">
-
                                     <a href="#" class="nav-link">
                                         <img class="mr-[10px]" src="./assets/images/coupons.svg" alt="">
                                         <span>Coupons</span>
@@ -190,9 +216,8 @@
                                         <li>demo2</li>
                                     </ul>
                             </li>
-                            <li onclick="toggleSubmenu(this)">
+                            <li class="nav-item has-submenu">
                                 <div class="flex items-center justify-between">
-
                                     <a href="#" class="nav-link">
                                         <img class="mr-[10px]" src="./assets/images/banner.svg" alt="">
                                         <span>Banners</span>
@@ -211,9 +236,8 @@
                     <li class="nav-item">
                         <span>Advertisement Management</span>
                         <ul class="pt-[10px] pl-6 submenu-main-wrap">
-                            <li onclick="toggleSubmenu(this)">
+                            <li class="nav-item has-submenu">
                                 <div class="flex items-center justify-between">
-
                                     <a href="#" class="nav-link">
                                         <img class="mr-[10px]" src="./assets/images/balloon.svg" alt="">
                                         <span>Advertisement</span>
@@ -246,12 +270,18 @@
                         <input type="text" placeholder="Type To Search...">
                     </div>
                 </div>
-                
                 <div class="header-right">
-                    <div class="notifications">
-                        <button class="notification-btn">
-                            <i class="fas fa-bell"></i>
-                            <span class="badge">3</span>
+                    <div class=" flex items-center gap-4">
+                        <button class="notification-btn btn-style">
+                            <img src="./assets/images/notification.svg" alt="">
+                        </button>
+                        <button class="msg-btn btn-style">
+                            <img src="./assets/images/msg.svg" alt="">
+                            <span class="badge"></span>
+                        </button>
+                        <button class="lang-btn btn-style flex items-center gap-[10px]">
+                            <span class="text-[#212B36]">En</span>
+                            <img src="./assets/images/arrow.svg" alt="">
                         </button>
                     </div>
                     
@@ -268,9 +298,9 @@
 
             <!-- Dashboard Content -->
             <main class="dashboard-content">
-                <!-- Page Title -->
-                <div class="page-title page-title-spaching-bottom">
-                    <div>
+                <!-- Breadcrumbs -->
+                <section class="page-title">
+                    <div class="page-title-spaching-bottom">
                         <h1>Dashboard</h1>
                         <div class="flex justify-between items-center mb-8">
                             <ul class="flex items-center gap-4">
@@ -278,15 +308,28 @@
                                 <li>/</li>
                                 <li class="text-[#3C50E0]">Dashboard</li>
                             </ul>
-                            <select name="date-range" id="date-range">
-                                <option value="month">Monthly</option>
-                                <option value="week">Weekly</option>
-                                <option value="year">Yearly</option>
-                            </select>
-    
+                            
+                            <div class="filter-bar">
+                                <!-- Date Range -->
+                                <div class="date-range">
+                                    <img src="./assets/images/calendar.svg" alt="calendar" />
+                                    <span id="dateText">Dec 29, 2023 - Jan 4, 2024</span>
+                                    <input type="date" id="startDate" hidden>
+                                    <input type="date" id="endDate" hidden>
+                                </div>
+
+                                <!-- Dropdown -->
+                                <div class="range-select">
+                                    <select>
+                                    <option>Monthly</option>
+                                    <option>Weekly</option>
+                                    <option>Yearly</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
                 <!-- Overview Cards -->
                 <section class="overview-cards section-spaching-bottom">
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-[27px]">
@@ -445,11 +488,11 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <div class="table-container bg-white rounded-lg shadow-md">
                             <div class="p-4 border-b border-gray-200">
-                                <h3 class="text-lg font-semibold text-gray-900">Top Selling Product</h3>
+                                <h3 class="">Top Selling Product</h3>
                             </div>
                             <div class="overflow-x-auto">
                                 <table class="data-table w-full">
-                                    <thead class="bg-gray-50">
+                                    <thead>
                                         <tr>
                                             <th class="">Product Name</th>
                                             <th class="">Category</th>
@@ -467,7 +510,7 @@
                                             <td class="">Electronics</td>
                                             <td class="">$269</td>
                                             <td class="">22</td>
-                                            <td class="">45</td>
+                                            <td class="added-color">$45</td>
                                         </tr>
                                         <tr class="hover:bg-gray-50">
                                             <td class="  flex gap-8 items-center">
@@ -477,7 +520,7 @@
                                             <td class="">Electronics</td>
                                             <td class="">$546</td>
                                             <td class="">72</td>
-                                            <td class="">$125</td>
+                                            <td class="added-color">$125</td>
                                             
                                         </tr>
                                         <tr class="hover:bg-gray-50">
@@ -486,9 +529,9 @@
                                                 Dell Inspiron 15
                                             </td>
                                             <td class="">Electronics</td>
-                                            <td class="">443</td>
+                                            <td class="">$443</td>
                                             <td class="">64</td>
-                                            <td class="">$247</td>
+                                            <td class="added-color">$247</td>
                                         </tr>
                                         <tr class="hover:bg-gray-50">
                                             <td class="  flex gap-8 items-center">
@@ -498,7 +541,7 @@
                                             <td class="">Electronics</td>
                                             <td class="">$499</td>
                                             <td class="">34</td>
-                                            <td class="">$103</td>
+                                            <td class="added-color">$103</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -507,17 +550,17 @@
                         
                         <div class="table-container bg-white rounded-lg shadow-md">
                             <div class="p-4 border-b border-gray-200">
-                                <h3 class="text-lg font-semibold text-gray-900">Top Rated Items</h3>
+                                <h3 class="">Top Rated Items</h3>
                             </div>
                             <div class="overflow-x-auto">
                                 <table class="data-table w-full">
-                                    <thead class="bg-gray-50">
+                                    <thead class="">
                                         <tr>
                                             <th class="">Product Name</th>
                                             <th class="">Category</th>
                                             <th class="">Price</th>
-                                            <th class="">Sold</th>
-                                            <th class="">Pofit</th>
+                                            <th class="">Rating</th>
+                                            <th class="">Profit</th>
                                         </tr>
                                     </thead>
                                     <tbody class="bg-white divide-y divide-gray-200">
@@ -528,8 +571,14 @@
                                             </td>
                                             <td class="">Electronics</td>
                                             <td class="">$269</td>
-                                            <td class="">22</td>
-                                            <td class="">45</td>
+                                            <td class="">
+                                                <div class="flex items-center gap-[2px]">
+                                                    <img src="./assets/images/star.svg" alt="">
+                                                    <span>5</span>
+                                                    <span class="added-style">(Reviews)</span>
+                                                </div>
+                                            </td>
+                                            <td class="added-color">$45</td>
                                         </tr>
                                         <tr class="hover:bg-gray-50">
                                             <td class="  flex gap-8 items-center">
@@ -538,8 +587,14 @@
                                             </td>
                                             <td class="">Electronics</td>
                                             <td class="">$546</td>
-                                            <td class="">72</td>
-                                            <td class="">$125</td>
+                                            <td class="">
+                                                <div class="flex items-center gap-[2px]">
+                                                    <img src="./assets/images/star.svg" alt="">
+                                                    <span>5</span>
+                                                    <span class="added-style">(Reviews)</span>
+                                                </div>
+                                            </td>
+                                            <td class="added-color">$125</td>
                                             
                                         </tr>
                                         <tr class="hover:bg-gray-50">
@@ -548,9 +603,15 @@
                                                 Dell Inspiron 15
                                             </td>
                                             <td class="">Electronics</td>
-                                            <td class="">443</td>
-                                            <td class="">64</td>
-                                            <td class="">$247</td>
+                                            <td class="">$443</td>
+                                            <td class="">
+                                                <div class="flex items-center gap-[2px]">
+                                                    <img src="./assets/images/star.svg" alt="">
+                                                    <span>5</span>
+                                                    <span class="added-style">(Reviews)</span>
+                                                </div>
+                                            </td>
+                                            <td class="added-color">$247</td>
                                         </tr>
                                         <tr class="hover:bg-gray-50">
                                             <td class="  flex gap-8 items-center">
@@ -559,8 +620,14 @@
                                             </td>
                                             <td class="">Electronics</td>
                                             <td class="">$499</td>
-                                            <td class="">34</td>
-                                            <td class="">$103</td>
+                                            <td class="">
+                                                <div class="flex items-center gap-[2px]">
+                                                    <img src="./assets/images/star.svg" alt="">
+                                                    <span>5</span>
+                                                    <span class="added-style">(Reviews)</span>
+                                                </div>
+                                            </td>
+                                            <td class="added-color">$103</td>
                                         </tr>
                                     </tbody>
                                 </table>
