@@ -303,7 +303,7 @@ body {
     height: 100vh;
 }
 
-.sidebar.collapsed + .main-content {
+.sidebar.collapsed ~ .main-content {
     margin-left: 70px;
 }
 
@@ -330,11 +330,11 @@ body {
 
 .mobile-sidebar-toggle {
     display: none;
-    background: none;
-    border: none;
-    font-size: 1.2rem;
     cursor: pointer;
-    color: #333;
+    background-color: #EFF4FB;
+    padding: 10px;
+    border-radius: 90px;
+    border: 1px solid #E2E8F0;
 }
 
 .search-bar {
@@ -369,7 +369,7 @@ body {
 .btn-style{
     background-color: #EFF4FB;
     padding: 7px;
-    border-radius: 31px;
+    border-radius: 90px;
     border: 1px solid #E2E8F0;
 }
 
@@ -605,13 +605,34 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 767.98px) {
     .sidebar {
         transform: translateX(-100%);
+    }
+
+    .header .search-bar{
+        gap: 10px;
+        margin-left: 182px;
+    }
+    .header .search-bar >img{
+        order: 2;
+    }
+    .header .search-bar >input{
+        order: 1;
+        text-align: end;
+    }
+
+    .main-content .header-right .lang-btn{
+        display: none;
     }
     
     .sidebar.active {
         transform: translateX(0);
+    }
+
+    .user-info {
+        display: none;
+        
     }
     
     .sidebar-toggle {
@@ -718,9 +739,25 @@ body {
 }
 
 .table-padding{
-    padding-left: 160px !important;
+    padding-left: 102px !important;
+}
+
+.custom-h-w{
+    width: 55px;
+    height: 50px;
 }
 
 
+
+/* // Layouts Variation
+$xxxl-device: "only screen and (max-width: 1759.98px)"; //1537
+$xxl-device: "only screen and (max-width: 1535.98px)"; // 1401
+$extra-device: "only screen and (max-width: 1399.98px)"; //1201
+$lg-layout: "only screen  and (max-width: 1199.98px)"; //993
+$md-layout: "only screen and (max-width: 991.98px)"; // 769
+$sm-layout: "only screen and (max-width: 767.98px)"; //577
+$extra-sm: "only screen and (max-width: 575.98px)"; //477
+$sm-mobile: "only screen and (max-width: 475.98px)"; //377
+$xs-mobile: "only screen and (max-width: 375.98px)"; //320 */
 
 
