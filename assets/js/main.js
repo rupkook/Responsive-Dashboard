@@ -29,51 +29,6 @@ function initializeDashboard() {
 
 
 // Sidebar functionality
-
-// function setupSidebar() {
-
-//     const sidebarToggle = document.getElementById('sidebarToggle');
-
-//     const sidebar = document.getElementById('sidebar');
-
-    
-
-//     if (sidebarToggle) {
-
-//         sidebarToggle.addEventListener('click', function() {
-
-//             sidebar.classList.toggle('collapsed');
-
-            
-
-//             // Change icon based on sidebar state
-
-//             const icon = sidebarToggle.querySelector('img');
-
-//             if (sidebar.classList.contains('collapsed')) {
-
-//                 // Rotate arrow to right when collapsed
-
-//                 icon.style.transform = 'rotate(180deg)';
-
-//             } else {
-
-//                 // Reset arrow rotation when expanded
-
-//                 icon.style.transform = 'rotate(0deg)';
-
-//             }
-
-//         });
-
-//     }
-
-// }
-
-
-
-
-
 function setupSidebar() {
 
     const sidebarToggle = document.getElementById('sidebarToggle');
@@ -139,6 +94,8 @@ function setupMobileMenu() {
     const mobileSidebarToggle = document.getElementById('mobileSidebarToggle');
 
     const sidebar = document.getElementById('sidebar');
+    
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
 
     
 
@@ -147,6 +104,24 @@ function setupMobileMenu() {
         mobileSidebarToggle.addEventListener('click', function() {
 
             sidebar.classList.toggle('active');
+            
+            sidebarOverlay.classList.toggle('active');
+
+        });
+
+    }
+
+    
+
+    // Close sidebar when clicking overlay
+
+    if (sidebarOverlay) {
+
+        sidebarOverlay.addEventListener('click', function() {
+
+            sidebar.classList.remove('active');
+            
+            sidebarOverlay.classList.remove('active');
 
         });
 
@@ -163,6 +138,8 @@ function setupMobileMenu() {
             if (!sidebar.contains(e.target) && !mobileSidebarToggle.contains(e.target)) {
 
                 sidebar.classList.remove('active');
+                
+                sidebarOverlay.classList.remove('active');
 
             }
 
@@ -427,6 +404,12 @@ function setupChart() {
     }
 
 }
+
+
+
+
+
+
 
 
 
